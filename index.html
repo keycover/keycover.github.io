@@ -11,31 +11,84 @@
 <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
 
 
+
+
+
 <!--  CSS -->
 <link href="css/font.css" rel="stylesheet">
 
 
 
  </head>
- <body>
+
+
+
+ <body >
+<div id="first" class="slide first ">
+  <h1>First Page</h1>
+</div>
+<div id="second" class="slide second hidden">
+  <h1>Second Page</h1>
+</div>
+<div id="third" class="slide third hidden">
+  <h1>Third Page</h1>
+  </div>
+  <div id="fourth" class="slide fourth hidden">
+    <h1>Fourth Page</h1>
+    </div>
+
+   <div id="menu" class="pagination-dots">
+   <a  class="dot active"  href="#first" > </a>
+   <a class="dot"  href="#second" > </a>
+   <a class="dot"  href="#third" > </a>
+    <a class="dot"  href="#fourth" > </a>
+   </div>
  </body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
    <script src="js/jquery/jquery-2.1.4.min.js"></script>
    <!-- Include all compiled plugins (below), or include individual files as needed -->
    <script src="js/bootstrap/bootstrap.min.js"></script>
 
 
+
+
+
    <!-- Javascript Script -->
    <script language="javascript">
-   window.tdiff = []; fred = function(a,b){return a-b;};
-   window.document.onload = function(e){
-       console.log("document.onload", e, Date.now() ,window.tdiff,
-       (window.tdiff[0] = Date.now()) && window.tdiff.reduce(fred) );
-   }
-   window.onload = function(e){
-    
+$(function(){
 
-   }
+
+$("#menu").children().each(function(index, el) {
+    $(this).click(function(event) {
+      $($("a[class='dot active']").attr("href")).addClass('hidden');
+      $("a[class='dot active']").removeClass('active');
+      $(this).addClass('active');
+      $($(this).attr("href")).toggleClass('hidden');
+
+
+    });
+});
+
+
+});
+
+
+
    </script>
 
 </html>
