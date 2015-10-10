@@ -96,11 +96,14 @@ $('body').bind('mousewheel', function(e){
       //Generic swipe handler for all directions
       swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
         if(direction=="up"){
-          $($("a[class='dot active']")).prev(0).trigger('click');
-          console.log("swipe up");
+          $($("a[class='dot active']")).next(0).trigger('click');
+
         }
         else{
-          $($("a[class='dot active']")).next(0).trigger('click');
+
+
+          $($("a[class='dot active']")).prev(0).trigger('click');
+          console.log("swipe up");
         }
       }
 });
