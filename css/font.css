@@ -1,17 +1,10 @@
+
 body{
   -webkit-background-size: cover;
 -moz-background-size: cover;
 -o-background-size: cover;
 background-size: cover;
 }
-
-.hidden{
-visibility: hidden;
-}
-
-
-
-
 
 .first{
   background: url(../img/bckg/first.jpg) no-repeat center center fixed;
@@ -24,62 +17,4 @@ visibility: hidden;
 }
 .fourth{
     background: url(../img/bckg/fourth.jpg) no-repeat center center fixed;
-}
-
-
-
-.pagination-dots {
-    position: fixed;
-    top: 50%;
-    right: 88px;
-    z-index: 100;
-    margin-top: -52px;
-}
-
-div{
-  margin: 0;
-padding: 0;
-border: 0;
-font-size: 100%;
-font: inherit;
-vertical-align: baseline;
-  display: block;
-}
-
-
-
-
-.pagination-dots .dot.active {
-    opacity: 1;
-}
-
-
-
-.pagination-dots .dot {
-    position: relative;
-    display: block;
-    width: 15px;
-    height: 15px;
-    margin-bottom: 15px;
-    background: #FFF;
-    border-radius: 50%;
-    opacity: .2;
-    cursor: pointer;
-    transition: opacity .15s;
-}
-a{
-  margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-a:-webkit-any-link {
-    color: -webkit-link;
-    text-decoration: underline;
-    cursor: auto;
-}
-.pagination-dots .dot:after {
-    content: '';
 }
