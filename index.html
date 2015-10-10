@@ -84,6 +84,17 @@ $("#menu").children().each(function(index, el) {
     });
 });
 
+$('body').bind('mousewheel', function(e){
+        if(e.originalEvent.wheelDelta /120 > 0) {
+          //  UP
+      $($("a[class='dot active']")).prev(0).trigger('click');
+        }
+        else{
+          // DOWN
+          $($("a[class='dot active']")).next(0).trigger('click');
+        }
+    });
+
 
 });
 
