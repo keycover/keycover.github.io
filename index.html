@@ -11,6 +11,8 @@
 <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
 
 
+<link rel="stylesheet" type="text/css" href="css/fullpage/jquery.fullPage.css" />
+
 <!--  CSS -->
 <link href="css/font.css" rel="stylesheet">
 
@@ -21,25 +23,32 @@
 
 
  <body >
-<div id="first" class="slide first ">
+   <div id="fullpage" >
+<div class="section active" data-anchor="_first" >
+<div id="first" class="slide first " >
   <h1>First Page</h1>
 </div>
-<div id="second" class="slide second hidden">
+</div>
+<div class="section" data-anchor="_second">
+<div id="second" class="slide second " >
   <h1>Second Page</h1>
 </div>
-<div id="third" class="slide third hidden">
+</div>
+<div class="section" data-anchor="_third">
+<div id="third" class="slide third " >
   <h1>Third Page</h1>
   </div>
-  <div id="fourth" class="slide fourth hidden">
+  </div>
+  <div class="section" data-anchor="_fourth">
+  <div id="fourth" class="slide fourth " >
     <h1>Fourth Page</h1>
+  </div>
+  </div>
+
     </div>
 
-   <div id="menu" class="pagination-dots">
-   <a  class="dot active"  href="#first" > </a>
-   <a class="dot"  href="#second" > </a>
-   <a class="dot"  href="#third" > </a>
-    <a class="dot"  href="#fourth" > </a>
-   </div>
+
+
  </body>
 
 
@@ -61,49 +70,26 @@
    <!-- Include all compiled plugins (below), or include individual files as needed -->
    <script src="js/bootstrap/bootstrap.min.js"></script>
 
+<script src="js/fullpage/jquery.easings.min.js"></script>
 
-<script type="text/javascript" src="js/touch/jquery.touchSwipe.min.js"></script>
 
+<script type="text/javascript" src="js/fullpage/jquery.slimscroll.min.js"></script>
+
+<script type="text/javascript" src="js/fullpage/jquery.fullPage.js"></script>
 
    <!-- Javascript Script -->
    <script language="javascript">
 $(function(){
+  $('#fullpage').fullpage({
+          anchors:['_first','_second','_third','_fourth'],
+          css3: true,
+          scrollingSpeed: 1000
 
+      });
 
-$("#menu").children().each(function(index, el) {
-    $(this).click(function(event) {
-      $($("a[class='dot active']").attr("href")).addClass('hidden');
-      $("a[class='dot active']").removeClass('active');
-      $(this).addClass('active');
-      $($(this).attr("href")).toggleClass('hidden');
-
-
-    });
 });
 
-$('body').bind('mousewheel', function(e){
-        if(e.originalEvent.wheelDelta /120 > 0) {
-          //  UP
-      $($("a[class='dot active']")).prev(0).trigger('click');
-        }
-        else{
-          // DOWN
-          $($("a[class='dot active']")).next(0).trigger('click');
-        }
-    });
 
-    $("body").swipe( {
-      //Generic swipe handler for all directions
-      swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-        if(direction=="up"){
-          $($("a[class='dot active']")).next(0).trigger('click');
-        }
-        else{
-          $($("a[class='dot active']")).prev(0).trigger('click');
-        }
-      }
-});
-});
 
 
 
