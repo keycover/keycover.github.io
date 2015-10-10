@@ -11,9 +11,6 @@
 <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
 
 
-
-
-
 <!--  CSS -->
 <link href="css/font.css" rel="stylesheet">
 
@@ -65,7 +62,7 @@
    <script src="js/bootstrap/bootstrap.min.js"></script>
 
 
-
+<script type="text/javascript" src="js/touch/jquery.touchSwipe.min.js"></script>
 
 
    <!-- Javascript Script -->
@@ -95,11 +92,23 @@ $('body').bind('mousewheel', function(e){
         }
     });
 
+    $("body").swipe( {
+      //Generic swipe handler for all directions
+      swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+        if(direction=="up"){
+          $($("a[class='dot active']")).prev(0).trigger('click');
+          console.log("swipe up");
+        }
+        else{
+          $($("a[class='dot active']")).next(0).trigger('click');
+        }
+      }
+});
+});
 
-});
-$(document).on("scrollstart",function(){
-  alert("Started scrolling!");
-});
+
+
+
 
 
 
