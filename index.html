@@ -45,7 +45,7 @@
 
   <div id="fourth" class="section "  alt="Lazy Image">
 <div class="lazy col-md-6 col-md-offset-3 .hidden-lg">
-      <h1> Contact Me </h1>
+      <h1 style="color:inherit;"> Contact Me </h1>
     <form class="form-horizontal center" role="form" >
     <div class="form-group list-inline">
         <h3><label for="name" class="col-sm-2 control-label">Name</label></h3>
@@ -99,6 +99,8 @@
 
  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
    <script src="js/jquery/jquery-2.1.4.min.js"></script>
+   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
    <!-- Include all compiled plugins (below), or include individual files as needed -->
    <script src="js/bootstrap/bootstrap.min.js"></script>
    <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazy/0.5.3/jquery.lazy.min.js"></script>
@@ -120,6 +122,7 @@ $(function(){
   $('#fullpage').fullpage({
     resize: true,
          verticalCentered: true,
+         scrollOverflow: true,
          anchors:["firstPage","secondPage","thirdPage","fourthPage"]
 
 
