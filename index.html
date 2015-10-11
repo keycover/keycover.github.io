@@ -114,19 +114,25 @@
 
    <!-- Javascript Script -->
    <script language="javascript">
+
 $(function(){
 
   jQuery("div.lazy").lazy({
         delay: 5000
     });
-  $('#fullpage').fullpage({
-    resize: true,
-         verticalCentered: true,         
-         scrollBar:true,
-         anchors:["firstPage","secondPage","thirdPage","fourthPage"]
+
+             $('#fullpage').fullpage({
+               resize: true,
+                    verticalCentered: true,
+                    css3:true,
+                    scrollOverflow: true,
+                    anchors:["firstPage","secondPage","thirdPage","fourthPage"]
 
 
-      });
+                 });
+$.fn.fullpage.reBuild();
+
+
 
 });
 
