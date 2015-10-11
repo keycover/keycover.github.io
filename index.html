@@ -25,25 +25,25 @@
  <body >
    <div id="fullpage" >
 
-<div  id="first" class="section" >
+<div  id="first" class="section lazy" alt="Lazy Image">
 
   <h1>First Page</h1>
 </div>
 
 
-<div id="second" class="section "   >
+<div id="second" class="section lazy"   alt="Lazy Image">
 
   <h1>Second Page</h1>
 </div>
 
 
-<div id="third" class="section" >
+<div id="third" class="section lazy" alt="Lazy Image">
 
   <h1>Third Page</h1>
   </div>
 
 
-  <div id="fourth" class="section"  >
+  <div id="fourth" class="section lazy"  alt="Lazy Image">
 
     <h1>Fourth Page</h1>
   </div>
@@ -73,6 +73,7 @@
    <script src="js/jquery/jquery-2.1.4.min.js"></script>
    <!-- Include all compiled plugins (below), or include individual files as needed -->
    <script src="js/bootstrap/bootstrap.min.js"></script>
+   <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazy/0.5.3/jquery.lazy.min.js"></script>
 
 <script src="js/fullpage/jquery.easings.min.js"></script>
 
@@ -84,6 +85,9 @@
    <!-- Javascript Script -->
    <script language="javascript">
 $(function(){
+  jQuery("div.lazy").lazy({
+        delay: 5000
+    });
   $('#fullpage').fullpage({
     resize: true,
          verticalCentered: true,
