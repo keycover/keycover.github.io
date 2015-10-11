@@ -1,20 +1,28 @@
-
-body{
-  -webkit-background-size: cover;
--moz-background-size: cover;
--o-background-size: cover;
-background-size: cover;
+.section{
+  text-align:center;
+}
+body {
+  font-size: 100%;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.first{
-  background: url(../img/bckg/first.jpg) no-repeat center center fixed;
+#first {
+   background: url('../img/bckg/first.jpg');
+  background-size: cover;
+
 }
-.second{
-    background: url(../img/bckg/second.jpg) no-repeat center center fixed;
+#second {
+   background: url('../img/bckg/second.jpg');
+  background-size: cover;
+
 }
-.third{
-    background: url(../img/bckg/third.jpg) no-repeat center center fixed;
+#third {
+   background: url('../img/bckg/third.jpg');
+  background-size: cover;
+
 }
-.fourth{
-    background: url(../img/bckg/fourth.jpg) no-repeat center center fixed;
+#fourth {
+   background: url('../img/bckg/fourth.jpg');
+  background-size: cover;
+
 }

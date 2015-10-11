@@ -25,22 +25,26 @@
  <body >
    <div id="fullpage" >
 
-<div id="first" class="first section">
+<div  id="first" class="section" >
+
   <h1>First Page</h1>
 </div>
 
 
-<div id="second" class="second section "   >
+<div id="second" class="section "   >
+
   <h1>Second Page</h1>
 </div>
 
 
-<div id="third" class="third section" >
+<div id="third" class="section" >
+
   <h1>Third Page</h1>
   </div>
 
 
-  <div id="fourth" class="fourth section"  >
+  <div id="fourth" class="section"  >
+
     <h1>Fourth Page</h1>
   </div>
 
@@ -81,8 +85,8 @@
    <script language="javascript">
 $(function(){
   $('#fullpage').fullpage({
-          css3: true,
-          scrollingSpeed: 1000
+    resize: true,
+         verticalCentered: true
 
       });
 
