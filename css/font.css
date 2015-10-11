@@ -1,6 +1,9 @@
 .section{
   text-align:center;
 }
+.hidden{
+  display: none;
+}
 body {
   font-size: 100%;
   font-family: 'Open Sans', sans-serif;

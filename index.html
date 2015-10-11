@@ -46,23 +46,27 @@
   <div id="fourth" class="section "  alt="Lazy Image">
 <div class="lazy col-md-6 col-md-offset-3">
       <h1 style="color:inherit;"> Contact Me </h1>
-    <form class="form-horizontal center" role="form" >
+    <div class="form-horizontal center" role="form" >
     <div class="form-group list-inline">
         <h3><label for="name" class="col-sm-2 control-label">Name</label></h3>
         <div class="col-sm-10" >
             <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="">
+            <span class="glyphicon glyphicon-remove form-control-feedback hidden"></span>
         </div>
     </div>
     <div class="form-group">
         <h3><label for="email" class="col-sm-2 control-label">Email</label></h3>
         <div class="col-sm-10" >
             <input type="email" class="form-control" id="email"  name="email" placeholder="example@domain.com" value="">
+              <span class="glyphicon glyphicon-remove form-control-feedback hidden"></span>
+            </input>
         </div>
     </div>
     <div class="form-group">
         <h3><label for="message" class="col-sm-2 control-label">Message</label></h3>
         <div class="col-sm-10" >
             <textarea class="form-control" rows="4" id="message" name="message"></textarea>
+            <span class="glyphicon glyphicon-remove form-control-feedback hidden"></span>
         </div>
     </div>
     <div class="form-group">
@@ -71,7 +75,7 @@
         </div>
     </div>
 
-</form>
+</div>
 </div>
 </div>
 
@@ -131,6 +135,11 @@ $(function(){
 
                  });
 $.fn.fullpage.reBuild();
+
+
+$("#submit").click(function(event) {
+  $('input[type=text]:empty, input[type=email]:empty').next(0).removeClass('hidden').parent(0).addClass('has-error');
+});;
 
 
 
