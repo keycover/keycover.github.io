@@ -12,7 +12,28 @@ body {
 h1 {
   color: #ffffff;
 }
+@media screen and (max-width: 640px){
+  #first {
+     background: url('../img/mobile/first.jpg');
+    background-size: cover;
 
+  }
+  #second {
+     background: url('../img/mobile/second.jpg');
+    background-size: cover;
+
+  }
+  #third {
+     background: url('../img/mobile/third.jpg');
+    background-size: cover;
+
+  }
+  #fourth {
+     background: url('../img/mobile/fourth.jpg');
+    background-size: cover;
+
+  }
+}
 #first {
    background: url('../img/bckg/first.jpg');
   background-size: cover;
