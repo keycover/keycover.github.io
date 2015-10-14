@@ -17,6 +17,10 @@
 <link href="css/font.css" rel="stylesheet">
 
 <link rel="stylesheet" type="text/css" href="plugin/sweetalert-master/dist/sweetalert.css">
+<link rel="stylesheet" type="text/css" href="css/slider/slider.css">
+
+
+
 
  </head>
 
@@ -35,7 +39,6 @@
 
 <div id="second" class="section lazy"   alt="Lazy Image">
 
-  <h1>Second Page</h1>
 </div>
 
 
@@ -111,7 +114,7 @@
 
    <!-- Include all compiled plugins (below), or include individual files as needed -->
    <script src="js/bootstrap/bootstrap.min.js"></script>
-   <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.lazy/0.5.3/jquery.lazy.min.js"></script>
+
 
 <script src="js/fullpage/jquery.easings.min.js"></script>
 
@@ -122,123 +125,16 @@
 
 <script src="plugin/sweetalert-master/dist/sweetalert.min.js"></script>
 
+<script src="js/main/main.js"></script>
+
    <!-- Javascript Script -->
    <script language="javascript">
 
 $(function(){
-$("#circle").addClass('hidden');
-$("#fullpage").removeClass('hidden');
-  function save_content_to_file(content, filename){
-      var dlg = false;
-      with(document){
-       ir=createElement('iframe');
-       ir.id='ifr';
-       ir.location='about.blank';
-       ir.style.display='none';
-       body.appendChild(ir);
-        with(getElementById('ifr').contentWindow.document){
-             open("text/plain", "replace");
-             charset = "utf-8";
-             write(content);
-             close();
-             document.charset = "utf-8";
-             dlg = execCommand('SaveAs', false, filename);
-         }
-         body.removeChild(ir);
-       }
-      return dlg;
-  }
-  jQuery("div.lazy").lazy({
-        delay: 5000
-    });
+  var $pxs_container	= $('#pxs_container');
+  $pxs_container.parallaxSlider();
 
-             $('#fullpage').fullpage({
-               resize: true,
-                    verticalCentered: true,
-                    css3:true,
-                    scrollOverflow: true,
-                    anchors:["firstPage","secondPage","thirdPage","fourthPage"]
-
-
-                 });
-$.fn.fullpage.reBuild();
-
-
-$("#submit").click(function(event) {
-  var validate=0;
-  if($("input[name='name']").val()=="")
-  $("input[name='name']").parent().parent().addClass('has-error');
-  else{
-    $("input[name='name']").parent().parent().removeClass('has-error');
-    validate++;
-  }
-  if($("input[name='email']").val()=="")
-  $("input[name='email']").parent().parent().addClass('has-error');
-  else{
-    $("input[name='email']").parent().parent().removeClass('has-error');
-    validate++;
-  }
-  if($("#message").val()==""){
-  $("#message").parent().parent().addClass('has-error');
-  }
-  else{
-    $("#message").parent().parent().removeClass('has-error');
-    validate++;
-  }
-
-  if(validate==3){
-    $(this).addClass('hidden').next().removeClass('hidden');
-
-
-
-    $.ajax({
-  type: "POST",
-  url: "https://mandrillapp.com/api/1.0/messages/send.json",
-  data: {
-    'key': 'YpzlWwJTtCf6wvYSvQekLA',
-    'message': {
-      'from_email': 'keycoverstaff@gmail.com',
-      'to': [
-          {
-            'email': 'keycoverstaff@gmail.com',
-            'name': 'Staff',
-            'type': 'to'
-          },
-          {
-            'email': 'riccardo.amadio1@gmail.com',
-            'name': 'Destinatario',
-            'type': 'to'
-          }
-        ],
-      'autotext': 'true',
-      'subject': "Nome: "+$("#name").text()+" email:"+$("#email").text(),
-      'html': $("#message").text()
-    }
-  }
-}).done(function(response) {
-  console.log(response);
-   var arr=[response[0],response[1]];
-   var sum=0;
-   $.each( arr, function( index, value ){
-     if(value['status']=='sent')
-     sum++;
-});
-console.log(sum);
-if(sum<2){
-  console.log("ERROR HTTP");
-
-}
-$("#submit").removeClass('hidden').next().addClass('hidden');
-swal("OK!", "The email was sent !", "success");
-
- });
-
-  }
-
-});;
-
-
-
+//finish jQuery
 });
 
 
