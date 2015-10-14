@@ -37,8 +37,15 @@
 </div>
 
 
-<div id="second" class="section lazy"   alt="Lazy Image">
-
+<div  class="section lazy"   alt="Lazy Image">
+  <div class="Collage">
+         <img src="img/keycover/1.jpg" />
+         <img src="img/keycover/2.jpg" />
+         <img src="img/keycover/3.jpg" />
+         <img src="img/keycover/4.jpg" />
+         <img src="img/keycover/5.jpg" />
+         <img src="img/keycover/6.jpg" />
+     </div>
 </div>
 
 
@@ -125,14 +132,15 @@
 
 <script src="plugin/sweetalert-master/dist/sweetalert.min.js"></script>
 
+<script src="plugin/ed-lea-jquery-collagePlus-2085c67/jquery.collagePlus.js"></script>
+
 <script src="js/main/main.js"></script>
 
    <!-- Javascript Script -->
    <script language="javascript">
 
 $(function(){
-  var $pxs_container	= $('#pxs_container');
-  $pxs_container.parallaxSlider();
+$('.Collage').collagePlus();
 
 //finish jQuery
 });
