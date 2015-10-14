@@ -23,8 +23,8 @@
 
 
  <body >
-
-   <div id="fullpage">
+<span id="circle" class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>
+   <div id="fullpage" class="hidden">
 
 
 <div  id="first" class="section lazy" alt="Lazy Image">
@@ -126,6 +126,8 @@
    <script language="javascript">
 
 $(function(){
+$("#circle").addClass('hidden');
+$("#fullpage").removeClass('hidden');
   function save_content_to_file(content, filename){
       var dlg = false;
       with(document){
