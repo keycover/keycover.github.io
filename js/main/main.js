@@ -1,9 +1,6 @@
 
 $(function(){
-  //** Loading Init  **/
-$("#circle").addClass('hidden');
-$("#fullpage").removeClass('hidden');
-/**Loading Finish  **/
+
 
 /** FullPage.js Init **/
 

@@ -32,26 +32,53 @@
 
 
 <div  id="first" class="section lazy" alt="Lazy Image">
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container" style="background-color:#fff;color:#000">
+    <ul class="row">
+<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="img/keycover/1.jpg" /></li>
+<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="img/keycover/2.jpg" /></li>
+<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="img/keycover/3.jpg" /></li>
+<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="img/keycover/4.jpg" /></li>
+<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="img/keycover/5.jpg" /></li>
+<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="img/keycover/6.jpg" /></li>
 
-  <h1>First Page</h1>
+    </ul>
+</div>
+
 </div>
 
 
-<div  class="section lazy"   alt="Lazy Image">
-  <div class="Collage">
-         <img src="img/keycover/1.jpg" />
-         <img src="img/keycover/2.jpg" />
-         <img src="img/keycover/3.jpg" />
-         <img src="img/keycover/4.jpg" />
-         <img src="img/keycover/5.jpg" />
-         <img src="img/keycover/6.jpg" />
+<div id="second" class="section lazy"   alt="Lazy Image">
+  <table class="table center">
+    <tr  style="color:#fff">
+      <th  align="center">
+        <img class="img-circle img-responsive" src="img/face/riccardo.jpg" />Founder </br>(Software Developer)</th>
+        <th align="center" >
+          <img class="img-circle img-responsive" src="img/face/federico.jpg" />Founder </br>(Phisyc)</th>
+            <th align="center">
+              <img class="img-circle img-responsive" src="img/face/elio.jpg" />Founder </br>(Phisyc)</th>
+  </tr></table>
      </div>
-</div>
+
 
 
 <div id="third" class="section lazy" alt="Lazy Image">
-
-  <h1>Third Page</h1>
+<h1 class="center">Press</h1>
+<table class="table" style="background-color:#fff">
+  <tr>
+    <th><img src="img/logo/repubblica.jpg" /></th>
+<th><img src="img/logo/neomobile.png" /></th>
+<th><img src="img/logo/codemotion.png" /></th>
+<th><img src="img/logo/shark_tank.jpg" /></th>
+</tr>
+</table>
   </div>
 
 
@@ -134,13 +161,34 @@
 
 <script src="plugin/ed-lea-jquery-collagePlus-2085c67/jquery.collagePlus.js"></script>
 
-<script src="js/main/main.js"></script>
+
 
    <!-- Javascript Script -->
    <script language="javascript">
 
 $(function(){
-$('.Collage').collagePlus();
+  //** Loading Init  **/
+$("#circle").addClass('hidden');
+$("#fullpage").removeClass('hidden');
+/**Loading Finish  **/
+
+
+var h=$("img[src='img/face/elio.jpg']").height();
+var w=$("img[src='img/face/elio.jpg']").width();
+$("img[src='img/face/riccardo.jpg']").width(w).height(h);
+$("img[src='img/face/federico.jpg']").width(w).height(h);
+
+$("li img").on("click",function(){
+  var src=$(this).attr('src');
+  var img='<img src="'+src+'" class="img-responsive"/>';
+  $("#myModal").modal();
+  $("#myModal").on("shown.bs.modal",function(){
+    $('#myModal .modal-body').html(img);
+  });
+  $("#myModal").on("hidden.bs.modal",function(){
+    $('#myModal .modal-body').html(' ');
+  });
+});
 
 //finish jQuery
 });
@@ -154,5 +202,9 @@ $('.Collage').collagePlus();
 
 
    </script>
+
+
+   <script src="js/main/main.js"></script>
+
 
 </html>
