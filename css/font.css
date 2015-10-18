@@ -1,3 +1,6 @@
+.section{
+  background-color: #EDEDEA;
+}
 .panel{
    border-collapse: collapse;
    border: 10px solid gray;
