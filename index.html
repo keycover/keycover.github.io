@@ -11,7 +11,6 @@
 
 <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
 
-
 <link rel="stylesheet" type="text/css" href="css/fullpage/jquery.fullPage.css" />
 
 <!--  CSS -->
@@ -31,10 +30,10 @@
 
  <body >
 <span id="circle" class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>
-   <div id="fullpage" class="hidden">
+   <div id="fullpage" class="hidden container-fluid">
 
 
-<div  style="padding:0px; margin:0px; background-color:#fff;" class="section lazy" alt="Lazy Image">
+<div  style="padding:0px; margin:0px; background-color:#fff;" class="section lazy .container-fluid" alt="Lazy Image">
 
     <div class="header" align="center">
       <img src="img/icone/icon.jpg" class="img-responsive" alt="logo" style="display: inline;"/>
@@ -47,25 +46,37 @@
           </div>
           <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
               <div style="display: none;">
-                  <img data-u="image" src="img/keycover/1.jpg" />
+                  <img data-u="image" src="img/keycover/1.jpg" class="img-responsive"/>
               </div>
               <div style="display: none;">
-                  <img data-u="image" src="img/keycover/2.jpg" />
+                  <img data-u="image" src="img/keycover/2.jpg" class="img-responsive"/>
               </div>
               <div style="display: none;">
-                  <img data-u="image" src="img/keycover/3.jpg" />
-              </div>
-
-              <div style="display: none;">
-                  <img data-u="image" src="img/keycover/4.jpg" />
+                  <img data-u="image" src="img/keycover/3.jpg" class="img-responsive"/>
               </div>
 
               <div style="display: none;">
-                  <img data-u="image" src="img/keycover/5.jpg" />
+                  <img data-u="image" src="img/keycover/4.jpg" class="img-responsive"/>
               </div>
 
               <div style="display: none;">
-                  <img data-u="image" src="img/keycover/6.jpg" />
+                  <img data-u="image" src="img/keycover/5.jpg" class="img-responsive"/>
+              </div>
+
+              <div style="display: none;">
+                  <img data-u="image" src="img/keycover/6.jpg" class="img-responsive"/>
+              </div
+              <div style="display: none;">
+                  <img data-u="image" src="img/keycover/7.jpg" class="img-responsive"/>
+              </div>
+              <div style="display: none;">
+                  <img data-u="image" src="img/keycover/8.jpg" class="img-responsive"/>
+              </div>
+              <div style="display: none;">
+                  <img data-u="image" src="img/keycover/9.jpg" class="img-responsive"/>
+              </div>
+              <div style="display: none;">
+                  <img data-u="image" src="img/keycover/10.jpg" class="img-responsive"/>
               </div>
           </div>
           <!-- Bullet Navigator -->
@@ -81,22 +92,27 @@
 </div>
 
 
-<div id="second" class="section lazy"   alt="Lazy Image">
-  <table class="table center">
-    <tr  style="color:#fff">
-      <th  align="center">
+<div  id="second" class="section"   alt="Lazy Image">
+<h1 class="center" style="color:#fff">Founder</h1>
+  <!--<div class="panel panel-default">-->
+  <table class="table">
+    <tr>
+      <th  align="center" style="color:#fff">
         <img class="img-circle img-responsive" src="img/face/riccardo.jpg" />Riccardo Amadio </br>Founder </br>(Software Developer)</th>
-        <th align="center" >
-          <img class="img-circle img-responsive" src="img/face/empty.jpg" />Federico Lucchesi </br>Founder </br>(Phisyc)</th>
-            <th align="center">
+        <th align="center" style="color:#fff">
+          <img class="img-circle img-responsive" src="img/face/federico.png" />Federico Lucchesi </br>Founder </br>(Phisyc)</th>
+            <th align="center" style="color:#fff">
               <img class="img-circle img-responsive" src="img/face/elio.jpg" />Elio Alunno Camelia </br>Founder </br>(Phisyc)</th>
-  </tr></table>
+  </tr>
+  </table>
+<!--</div>-->
      </div>
 
 
 
 <div id="third" class="section lazy" alt="Lazy Image">
-<h1 class="center">Press</h1>
+<h1 class="center" style="color:#fff">Press</h1>
+  <div class="panel panel-default">
 <table class="table" style="background-color:#fff">
   <tr>
     <th><img src="img/logo/repubblica.jpg" class="img-responsive"/></th>
@@ -105,6 +121,7 @@
 <th><img src="img/logo/shark_tank.jpg" class="img-responsive"/></th>
 </tr>
 </table>
+</div>
   </div>
 
 
@@ -202,7 +219,7 @@ $("#fullpage").removeClass('hidden');
 var h=$("img[src='img/face/elio.jpg']").height();
 var w=$("img[src='img/face/elio.jpg']").width();
 $("img[src='img/face/riccardo.jpg']").width(w).height(h);
-$("img[src='img/face/federico.jpg']").width(w).height(h);
+$("img[src='img/face/federico.png']").width(w).height(h);
 
 $("li img").on("click",function(){
   var src=$(this).attr('src');

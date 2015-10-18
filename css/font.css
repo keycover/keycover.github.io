@@ -1,3 +1,7 @@
+.panel{
+   border-collapse: collapse;
+   border: 10px solid gray;
+ }
 
 ul{
   padding: 0 0 0 0;
