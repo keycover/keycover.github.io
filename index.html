@@ -13,6 +13,12 @@
 
 <link rel="stylesheet" type="text/css" href="css/fullpage/jquery.fullPage.css" />
 
+<!-- Font Carattere -->
+<link rel="stylesheet" type="text/css" href="css/dancing_font/Dancing+Script.css" />
+<link rel="stylesheet" type="text/css" href="css/dancing_font/Josefin+Sans.css" />
+<!-- Finish Font Carattere -->
+
+
 <!--  CSS -->
 <link href="css/font.css" rel="stylesheet">
 
@@ -29,16 +35,18 @@
 
 
  <body >
-<span id="circle" class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>
+
+<span id="circle" class="glyphicon glyphicon-refresh glyphicon-refresh-animate " align="center"></span>
+
    <div id="fullpage" class="hidden">
 
 
 <div  style="padding:0px; margin:0px; " class="section lazy .container-fluid" alt="Lazy Image">
 
-    <div class="header" align="center">
-      <img src="img/icone/icon.jpg" class="img-responsive" alt="logo" style="display: inline;"/>
-    </div>
-<div style="margin-left:5cm;margin-right:5cm;">
+  <div class="header" align="center" >
+    <img src="img/icone/icon.jpg" class="img-circle img-responsive" alt="logo" style="display: inline;"/>
+  </div>
+<div id="gallery"  class="content-fluid">
       <div id="jssor_1" style="position: relative; margin: 0px auto; top: 0px;  width: 1300px; height: 500px; overflow: hidden; visibility: hidden;">
           <!-- Loading Screen -->
           <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
@@ -90,28 +98,36 @@
           <a href="http://www.jssor.com" style="display:none">Jssor Slider</a>
       </div>
     </div>
+    <p id="p" class="content-fluid font" >
+      KeyCover è la prima Cover-tastiera pensata per gli ipovedenti e per i ciechi.</br>
+      Si tratta di una tastiera Braille a 8 punti adattabile ad ogni smartphone.
+    </p>
 </div>
 
 
-<div   class="section"   alt="Lazy Image">
-<h1 class="center" style="color:#000">Founders</h1>
-  <table class="table">
+<div   class="section content-fluid"   alt="Lazy Image">
+<h1 class="center font" >Founders</h1>
+  <table class="table content-fluid">
     <tr>
-      <th style="color:#000">
+      <th class="font">
         <img class="img-circle img-responsive" src="img/face/riccardo.jpg" />Riccardo Amadio </br>Founder </br>(Software Developer)</th>
-        <th  style="color:#000">
+        <th  class="font">
           <img class="img-circle img-responsive" src="img/face/federico.png" />Federico Lucchesi </br>Founder </br>(Physicist)</th>
-            <th  style="color:#000">
+            <th  class="font">
               <img class="img-circle img-responsive" src="img/face/elio.jpg" />Elio Alunno Camelia </br>Founder </br>(Physicist)</th>
   </tr>
+  <tr>
+    <th class="font">
+      <img class="img-circle img-responsive" src="img/face/empty.jpg" />Riccardo Chiaraluce </br>Founder </br>(Maker)</th>
+      <th class="font">
+        <img class="img-circle img-responsive" src="img/face/empty.jpg" />Alessandro Borelli </br>Founder </br>(Software Developer)</th></tr>
   </table>
-
      </div>
 
 
 
-<div  class="section lazy" alt="Lazy Image">
-<h1 class="center" style="color:#000">Press</h1>
+<div  class="section content-fluid" alt="Lazy Image">
+<h1 class="center font">Press</h1>
   <!--<div class="panel panel-default">-->
 <table class="table" >
 
@@ -130,31 +146,31 @@
 
 
 <div class="lazy col-md-6 col-md-offset-3">
-      <h1 style="color:inherit;"> Contact Me </h1>
+      <h1 class="font" > Contact Me </h1>
     <div class="form-horizontal center" role="form" >
     <div class="form-group list-inline">
-        <h3><label for="name" class="col-sm-2 control-label">Name</label></h3>
+        <h3><label for="name" class="col-sm-2 control-label font">Name</label></h3>
         <div class="col-sm-10" >
-            <input type="text" class="form-control" id="name" name="name" placeholder="First & Last Name" value="">
+            <input type="text" class="form-control font" id="name" name="name" placeholder="First & Last Name" value="">
           </input>
         </div>
     </div>
     <div class="form-group">
-        <h3><label for="email" class="col-sm-2 control-label">Email</label></h3>
+        <h3><label for="email" class="col-sm-2 control-label font">Email</label></h3>
         <div class="col-sm-10" >
-            <input type="email" class="form-control" id="email"  name="email" placeholder="example@domain.com" value="">
+            <input type="email" class="form-control class="font"" id="email"  name="email" placeholder="example@domain.com" value="">
             </input>
         </div>
     </div>
     <div class="form-group">
-        <h3><label for="message" class="col-sm-2 control-label">Message</label></h3>
+        <h3><label for="message" class="col-sm-2 control-label font">Message</label></h3>
         <div class="col-sm-10" >
-            <textarea class="form-control" rows="4" id="message" name="message"></textarea>
+            <textarea class="form-control font" rows="4" id="message" name="message"></textarea>
         </div>
     </div>
     <div class="form-group">
         <div class="col-sm-10 col-sm-offset-2">
-            <button id="submit" name="submit" type="submit" value="Send" class="btn btn-primary btn-lg">Send
+            <button id="submit" name="submit" type="submit" value="Send" class="btn btn-primary btn-lg font">Send
           </button>
           <button id="hidden" class="btn btn-primary btn-lg hidden"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span> Loading...</button>
         </div>
@@ -206,7 +222,7 @@
 <script src="plugin/ed-lea-jquery-collagePlus-2085c67/jquery.collagePlus.js"></script>
 
 <script type="text/javascript" src="js/gallery/jssor.slider-20.mini.js"></script>
-
+<script src="js/utils/utils.js"></script>
    <!-- Javascript Script -->
    <script language="javascript">
 
@@ -216,12 +232,9 @@ $("#circle").addClass('hidden');
 $("#fullpage").removeClass('hidden');
 /**Loading Finish  **/
 
-
-var h=$("img[src='img/face/elio.jpg']").height();
-var w=$("img[src='img/face/elio.jpg']").width();
-$("img[src='img/face/riccardo.jpg']").width(w).height(h);
-$("img[src='img/face/federico.png']").width(w).height(h);
-
+/*Adapt Image of Face to Size of Web Page */
+adapt_image();
+/* Finish */
 $("li img").on("click",function(){
   var src=$(this).attr('src');
   var img='<img src="'+src+'" class="img-responsive"/>';

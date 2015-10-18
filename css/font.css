@@ -1,3 +1,21 @@
+.font{
+  font-family: 'Dancing Script', Georgia, Times, serif;
+      
+      line-height: 60px;
+}
+#p{
+  font-size: 30px;
+
+  padding:3cm 0cm 0cm 0cm;
+
+}
+.header{
+  margin: 0cm 0cm 0cm 0cm;
+}
+#gallery{
+  margin: -1cm 10cm -2cm 10cm;
+  padding: 1.2cm 0cm 1cm 0cm;
+}
 .section{
   background-image: url('../img/bckg/bkgr.png');
 }
@@ -33,6 +51,11 @@ h1 {
   color: #ffffff;
 }
 @media screen and (max-width: 640px){
+
+    #gallery{
+      margin: -1cm 1.5cm -1cm 1.5cm;
+    }
+
   #first {
      background: url('../img/mobile/first.jpg');
     background-size: cover;
