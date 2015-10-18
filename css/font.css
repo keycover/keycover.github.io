@@ -1,6 +1,6 @@
 .font{
   font-family: 'Dancing Script', Georgia, Times, serif;
-      
+
       line-height: 60px;
 }
 #p{
@@ -47,9 +47,7 @@ body {
   font-size: 100%;
   font-family: 'Open Sans', sans-serif;
 }
-h1 {
-  color: #ffffff;
-}
+
 @media screen and (max-width: 640px){
 
     #gallery{
