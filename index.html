@@ -4,9 +4,10 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>KeyCover</title>
 
-
-
+    <link rel="shortcut icon" href="img/icone/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/icone/favicon.ico" type="image/x-icon">
 
 <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet">
 
@@ -18,8 +19,10 @@
 
 <link rel="stylesheet" type="text/css" href="plugin/sweetalert-master/dist/sweetalert.css">
 <link rel="stylesheet" type="text/css" href="css/slider/slider.css">
+<link rel="stylesheet" type="text/css" href="css/gallery/gallery.css">
 
 
+<meta name="description" content="KeyCover , keyboard for blind, keyboard,cover" />
 
 
  </head>
@@ -31,27 +34,50 @@
    <div id="fullpage" class="hidden">
 
 
-<div  id="first" class="section lazy" alt="Lazy Image">
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-body">
-      </div>
+<div  style="padding:0px; margin:0px; background-color:#fff;" class="section lazy" alt="Lazy Image">
+
+    <div class="header" align="center">
+      <img src="img/icone/icon.jpg" class="img-responsive" alt="logo" style="display: inline;"/>
     </div>
-  </div>
-</div>
-<div class="container" style="background-color:#fff;color:#000">
-    <ul class="row">
-<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="img/keycover/1.jpg" /></li>
-<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="img/keycover/2.jpg" /></li>
-<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="img/keycover/3.jpg" /></li>
-<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="img/keycover/4.jpg" /></li>
-<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="img/keycover/5.jpg" /></li>
-<li class="col-lg-2 col-md-2 col-sm-3 col-xs-4"><img src="img/keycover/6.jpg" /></li>
+      <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden; visibility: hidden;">
+          <!-- Loading Screen -->
+          <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+              <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 0px; width: 100%; height: 100%;"></div>
+              <div style="position:absolute;display:block;background:url('img/gallery/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+          </div>
+          <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 1300px; height: 500px; overflow: hidden;">
+              <div style="display: none;">
+                  <img data-u="image" src="img/keycover/1.jpg" />
+              </div>
+              <div style="display: none;">
+                  <img data-u="image" src="img/keycover/2.jpg" />
+              </div>
+              <div style="display: none;">
+                  <img data-u="image" src="img/keycover/3.jpg" />
+              </div>
 
-    </ul>
-</div>
+              <div style="display: none;">
+                  <img data-u="image" src="img/keycover/4.jpg" />
+              </div>
 
+              <div style="display: none;">
+                  <img data-u="image" src="img/keycover/5.jpg" />
+              </div>
+
+              <div style="display: none;">
+                  <img data-u="image" src="img/keycover/6.jpg" />
+              </div>
+          </div>
+          <!-- Bullet Navigator -->
+          <div data-u="navigator" class="jssorb05" style="bottom:16px;right:6px;" data-autocenter="1">
+              <!-- bullet navigator item prototype -->
+              <div data-u="prototype" style="width:16px;height:16px;"></div>
+          </div>
+          <!-- Arrow Navigator -->
+          <span data-u="arrowleft" class="jssora22l" style="top:123px;left:12px;width:40px;height:58px;" data-autocenter="2"></span>
+          <span data-u="arrowright" class="jssora22r" style="top:123px;right:12px;width:40px;height:58px;" data-autocenter="2"></span>
+          <a href="http://www.jssor.com" style="display:none">Jssor Slider</a>
+      </div>
 </div>
 
 
@@ -59,11 +85,11 @@
   <table class="table center">
     <tr  style="color:#fff">
       <th  align="center">
-        <img class="img-circle img-responsive" src="img/face/riccardo.jpg" />Founder </br>(Software Developer)</th>
+        <img class="img-circle img-responsive" src="img/face/riccardo.jpg" />Riccardo Amadio </br>Founder </br>(Software Developer)</th>
         <th align="center" >
-          <img class="img-circle img-responsive" src="img/face/federico.jpg" />Founder </br>(Phisyc)</th>
+          <img class="img-circle img-responsive" src="img/face/empty.jpg" />Federico Lucchesi </br>Founder </br>(Phisyc)</th>
             <th align="center">
-              <img class="img-circle img-responsive" src="img/face/elio.jpg" />Founder </br>(Phisyc)</th>
+              <img class="img-circle img-responsive" src="img/face/elio.jpg" />Elio Alunno Camelia </br>Founder </br>(Phisyc)</th>
   </tr></table>
      </div>
 
@@ -161,7 +187,7 @@
 
 <script src="plugin/ed-lea-jquery-collagePlus-2085c67/jquery.collagePlus.js"></script>
 
-
+<script type="text/javascript" src="js/gallery/jssor.slider-20.mini.js"></script>
 
    <!-- Javascript Script -->
    <script language="javascript">
@@ -191,6 +217,41 @@ $("li img").on("click",function(){
 });
 
 //finish jQuery
+var jssor_1_options = {
+  $AutoPlay: true,
+  $SlideDuration: 800,
+  $SlideEasing: $Jease$.$OutQuint,
+  $ArrowNavigatorOptions: {
+    $Class: $JssorArrowNavigator$
+  },
+  $BulletNavigatorOptions: {
+    $Class: $JssorBulletNavigator$
+  }
+};
+
+var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+//responsive code begin
+//you can remove responsive code if you don't want the slider scales while window resizes
+function ScaleSlider() {
+    var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+    if (refSize) {
+        refSize = Math.min(refSize, 1920);
+        jssor_1_slider.$ScaleWidth(refSize);
+    }
+    else {
+        window.setTimeout(ScaleSlider, 30);
+    }
+}
+ScaleSlider();
+$(window).bind("load", ScaleSlider);
+$(window).bind("resize", ScaleSlider);
+$(window).bind("orientationchange", ScaleSlider);
+//responsive code end
+
+
+
+
 });
 
 
