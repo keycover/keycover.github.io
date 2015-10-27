@@ -70,8 +70,8 @@ $("#submit").click(function(event) {
           }
         ],
       'autotext': 'true',
-      'subject': "Nome: "+$("#name").text()+" email:"+$("#email").text(),
-      'html': $("#message").text()
+      'subject': "Nome: "+$("#name").val()+" email:"+$("#email").val(),
+      'html': $("#message").val()
     }
   }
 }).done(function(response) {
